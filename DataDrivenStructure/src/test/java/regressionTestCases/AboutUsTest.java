@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.AboutUsPage;
 import pages.IndexPage;
 import utilityComponents.BaseClass;
+import utilityComponents.Log;
 
 public class AboutUsTest extends BaseClass{
 	IndexPage index;
@@ -22,9 +23,11 @@ public class AboutUsTest extends BaseClass{
 	{
 		index=new IndexPage();
 		about=new AboutUsPage();
+		Log.info("click on project");
 		index.addresspage();
 		about.aboutUsTitle();
 	}
+	/*
 	@Test
 	public void verifyOurCompanyTitle() {
 		index=new IndexPage();
@@ -39,7 +42,7 @@ public class AboutUsTest extends BaseClass{
 		index.addresspage();
 		about.ourTeam();
 	}
-	/*
+	
 	@Test
 	public void verifyOurTestTitle() {
 		index=new IndexPage();

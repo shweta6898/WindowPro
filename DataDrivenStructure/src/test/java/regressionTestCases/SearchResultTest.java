@@ -10,6 +10,7 @@ import pages.IndexPage;
 import pages.LoginPage;
 import pages.SearchResultPage;
 import utilityComponents.BaseClass;
+import utilityComponents.Log;
 
 public class SearchResultTest extends BaseClass{
 	IndexPage indexpage;
@@ -28,9 +29,13 @@ public class SearchResultTest extends BaseClass{
 		indexpage=new IndexPage();
 		loginpage=new LoginPage();
 		homepage=new HomePage();
+		Log.info("Click on sign in button");
 		indexpage.SignInButton();
+		Log.info("Enter username & password");
 		homepage=loginpage.LoginPage("shweta123@gmail.com", "123456");
+		Log.info("Click on Home Button");
 		homepage.clickHomeBtn();
+		Log.info("Search products");
 		homepage.searchText("t-shirts");
 		searchResult=new SearchResultPage();
 		boolean verify=searchResult.isSearchResultDisplay();

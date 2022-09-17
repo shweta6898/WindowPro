@@ -3,19 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="regressionTestCases.HomePageTestCases">
+      <class name="regressionTestCases.AccountCreationTest">
         <methods>
-          <include name="verifyaddressVisibility"/>
+          <include name="setUp"/>
           <include name="afterSuite"/>
-          <include name="quit"/>
-          <include name="verifySearchText" invocation-numbers="0 1 2 3 4 5"/>
-          <include name="verifybackHomeVisibility"/>
-          <include name="setup"/>
           <include name="loadConfig"/>
-          <include name="verifyorderhisVisibility"/>
-          <include name="verifyLogin"/>
+          <include name="verifyAccCreateBtnText"/>
         </methods>
-      </class> <!-- regressionTestCases.HomePageTestCases -->
+      </class> <!-- regressionTestCases.AccountCreationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

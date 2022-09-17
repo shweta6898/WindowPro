@@ -11,6 +11,7 @@ import pages.HomePage;
 import pages.IndexPage;
 import pages.LoginPage;
 import utilityComponents.BaseClass;
+import utilityComponents.Log;
 
 public class AccountCreationTest extends BaseClass{
 	AccountCreationPage accCreate;
@@ -30,8 +31,10 @@ public class AccountCreationTest extends BaseClass{
 	{
 		indexpage=new IndexPage();
 		loginpage=new LoginPage();
+		Log.info("Click on Sign In button");
 		loginpage=indexpage.SignInButton();
 		accCreate=new AccountCreationPage();
+		Log.info("Create new accout");
 		loginpage.NewAcc("sunil@gmail.com");
 		//accCreate.enterFirstName("shweta");
 		accCreate.enterLastName("chavhan");
